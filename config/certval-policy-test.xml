@@ -2,6 +2,20 @@
 <policy>
     <find>
         <trustedcertificate>
+            <class name="tr.gov.tubitak.uekae.esya.api.certificate.validation.find.certificate.trusted.TrustedCertificateFinderFromXml">
+                <param name="storepath" value="http://depo.kamusm.gov.tr/depo/SertifikaDeposu.xml"/>
+            </class>
+            <!--
+            <class name="tr.gov.tubitak.uekae.esya.api.certificate.validation.find.certificate.trusted.TrustedCertificateFinderFromXml">
+                <param name="storepath" value="C:\ma3api-java-bundle\sertifika deposu\SertifikaDeposu.xml"/>
+            </class>
+            -->
+            <!--
+            <class name="tr.gov.tubitak.uekae.esya.api.certificate.validation.find.certificate.trusted.TrustedCertificateFinderFromFileSystem">
+                <param name="dizin" value="C:\ma3api-java-bundle\sertifika deposu"/>
+            </class>
+            -->
+
             <class name="tr.gov.tubitak.uekae.esya.api.certificate.validation.find.certificate.trusted.TrustedCertificateFinderFromECertStore"/>
             <class name="tr.gov.tubitak.uekae.esya.api.certificate.validation.find.certificate.trusted.TrustedCertificateFinderFromFileSystem">
                 <param name="dizin" value="sertifika deposu\test kok sertifika"/>

@@ -71,8 +71,8 @@ public class SampleBase {
      * @return the pin
      */
     protected static String getPin() throws ESYAException {
-        throw new ESYAException("Set the pin of the smart card!");
-        //return PIN_SMARTCARD;
+//        throw new ESYAException("Set the pin of the smart card!");
+        return PIN_SMARTCARD;
     }
 
     /**
