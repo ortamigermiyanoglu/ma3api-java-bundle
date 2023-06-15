@@ -1,0 +1,145 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tubitak.gov.tr/xml/signature"
+targetNamespace="http://www.tubitak.gov.tr/xml/signature" elementFormDefault="qualified">
+	
+	<xs:element name="SignHashRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element  name="HashForSign"      type="xs:string"/>
+				<xs:element  name="DisplayText"      type="xs:string"/>
+				<xs:element  name="PhoneNumber"      type="xs:string"/>
+				<xs:element  name="Operator"         type="xs:int"/>
+				<xs:element  name="SigningAlg"       type="xs:string"/>
+				<xs:element  name="MultiSignature"   type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+	<xs:element name="SignHashResponse">
+        <xs:complexType>
+            <xs:sequence>
+                 <xs:element name="SignHashReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="CertificateInitialsRequest">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element  name="PhoneNumber" type="xs:string"/>
+               <xs:element  name="Operator" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	 <xs:element name="CertificateInitialsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CertificateInitialsReturn" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+  	
+    <xs:element name="SigningCertRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCert" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+	
+	   <xs:element name="MultipleSignSupportedRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MultipleSignSupported" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="MultipleSignSupportedResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MultipleSignSupportedReturn" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+	
+	<xs:element name="SigningCertAttrRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttr" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertAttrResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+		
+	<xs:element name="SigningCertAttrV2Request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrV2" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertAttrV2Response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrV2Return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="SignerIdentifierRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SignerIdentifier" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SignerIdentifierResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SignerIdentifierReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="DigestAlgRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DigestAlg" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="DigestAlgResponse">
+        <xs:complexType>
+            <xs:sequence>
+                   <xs:element name="DigestAlgReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	    
+	<xs:complexType name="void">
+        <xs:sequence>             
+        </xs:sequence>
+    </xs:complexType>	
+			
+</xs:schema>
+
+      

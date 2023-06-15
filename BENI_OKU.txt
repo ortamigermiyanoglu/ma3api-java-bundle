@@ -1,0 +1,40 @@
+MA3 API - JAVA
+**************
+NOTLAR
+-------
+=> MA3 API Kullanım Kılavuzu "doc" dizini altında bulunmaktadır.
+
+=> "lib" dizini altında kullanmanız gereken jarlar bulunmaktadır. Projeler için gerekli jarlara lib/BENI_OKU dosyasından bakabilirsiniz.
+
+=> SampleBase.java sınıflardan proje relative path dizini, Akıllı Kart pini gibi ayarları konfigüre ediniz.
+
+=> PKCS11 kütüphanesinin Java SDK içeriğine dahil edilmediği Java sürümleri için
+   "ornekler\AndroidImza\EsyaAndroidSignExample\libs" dizinde bulunan sunpkcs11.jar kütüphanesini kullanabilirsiniz.
+
+=> "ornekler" klasörünün altında XAdES, CAdES, ASiC, PAdES, Androidİmza ve Mobilİmza için örnek kullanım test sınıflarını bulabilirsiniz.
+
+=> Testleri çalıştırmadan önce, aşağıda verilen bağlantılardan güncel "SertifikaDeposu.svt" veya "SertifikaDeposu.xml" dosyasını indiriniz.
+   İndirdiğiniz dosyayı kullanıcı dizini altında oluşturacağınız ".sertifikadeposu" isimli dizine kopyalayınız.
+
+      http://depo.kamusm.gov.tr/depo/SertifikaDeposu.svt adresinden "SertifikaDeposu.svt" dosyasını,
+      http://depo.kamusm.gov.tr/depo/SertifikaDeposu.xml adresinden "SertifikaDeposu.xml"  dosyasını indirebilirsiniz.
+
+=> İmza Doğrulama Policy dosyasınının bulunduğu dizini ve Zaman Damgası sunucu ayarlarını
+   CAdES için CadesSampleBase.java sınıfından,
+   PAdES için esya-signature-config.xml dosyasından ve
+   XAdES için xmlsignature-config.xml dosyasından konfigüre edebilirsiniz.
+
+=> "lisans" dizini altındaki lisans.xml dosyası kullanılarak her türlü sertifika ile CAdES, XAdES, ASIC ve PAdES imza oluşturabilirsiniz.
+
+=> PAdES(PDF) imza işlemlerini yapabilmek için "lib" dizinine itext kütüphanesini eklemeniz gerekmektedir.
+   itext lisans şartlarını kabul ediyorsanız, internetten itext kütüphanesini indirebilirsiniz: https://github.com/itext/itextpdf/releases(örnek: itextpdf-5.4.4.jar).
+
+=> Test sertifikaları ile çalışılacaksa, kullanılan sertifikaların kökünün API'ye tanıtılması gerekmektedir.
+   Kök sertifikaların bulunduğu dizin(sertifika deposu\test kok sertifika), politika dosyasındaki(config\certval-policy-test.xml)
+   "TrustedCertificateFinderFromFileSystem" bulucusu ile API'ye tanıtılabilir.
+
+=> EST ve üzeri tipinde imza atmak için zaman damgası ayarlarının yapılması gerekmektedir.
+   Test Zaman Damgası hesabı veya Nitelikli Zaman Damgası hesabı almak için "bilgi@kamusm.gov.tr" adresine mail atınız.
+
+
+

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+	<artifactId>MobileSignatureClient</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MobileSignatureClient</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<ma3api.version>2.3.11</ma3api.version>
+		<libdirectory>${project.basedir}/../../../lib</libdirectory>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>asn1rt</artifactId>
+			<version>6.6.4</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/asn1rt-6.6.4.jar</systemPath>
+		</dependency>	
+		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.2</version>
+		</dependency>
+				
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>		
+		</dependency>
+		
+		<dependency>
+	       <groupId>org.slf4j</groupId>
+	       <artifactId>slf4j-api</artifactId>
+	    </dependency>
+				   
+     	<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-asn</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-asn-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-cmssignature</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-cmssignature-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-certvalidation</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-certvalidation-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-certstore</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-certstore-${ma3api.version}.jar</systemPath>
+		</dependency>
+			
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-common</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-common-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-crypto</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-crypto-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-crypto-gnuprovider</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-crypto-gnuprovider-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-infra</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-infra-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-mssclient</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-mssclient-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-signature</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-signature-${ma3api.version}.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-turkcellmssprovider</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+            <systemPath>${libdirectory}/ma3api-turkcellmssprovider-${ma3api.version}.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>tr.gov.tubitak.uekae.esya.api</groupId>
+			<artifactId>ma3api-aveamssprovider</artifactId>
+			<version>${ma3api.version}</version>
+			<scope>system</scope>
+			<systemPath>${libdirectory}/ma3api-aveamssprovider-${ma3api.version}.jar</systemPath>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+		    <groupId>org.jvnet.jaxb2.maven2</groupId>
+		    <artifactId>maven-jaxb2-plugin</artifactId>
+		    <version>0.13.2</version>
+		    <executions>
+		        <execution>
+		            <goals>
+		                <goal>generate</goal>
+		            </goals>
+		        </execution>
+		    </executions>
+		    <configuration>
+		        <generatePackage>tr.gov.tubitak.uekae.esya.api.schemas.signature</generatePackage>
+		        <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+		        <schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
+		        <schemaIncludes>
+		            <include>*.wsdl</include>
+		        </schemaIncludes>
+		    </configuration>
+		</plugin> 
+		</plugins>
+	</build>
+
+</project>

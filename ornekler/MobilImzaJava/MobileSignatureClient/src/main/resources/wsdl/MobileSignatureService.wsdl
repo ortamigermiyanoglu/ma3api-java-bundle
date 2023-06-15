@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.tubitak.gov.tr/xml/signature" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tubitak.gov.tr/xml/signature" targetNamespace="http://www.tubitak.gov.tr/xml/signature">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tubitak.gov.tr/xml/signature">
+	
+	<xs:element name="SignHashRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="HashForSign" type="xs:string"/>
+				<xs:element name="DisplayText" type="xs:string"/>
+				<xs:element name="PhoneNumber" type="xs:string"/>
+				<xs:element name="Operator" type="xs:int"/>
+				<xs:element name="SigningAlg" type="xs:string"/>
+				<xs:element name="MultiSignature" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+	<xs:element name="SignHashResponse">
+        <xs:complexType>
+            <xs:sequence>
+                 <xs:element name="SignHashReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="CertificateInitialsRequest">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="PhoneNumber" type="xs:string"/>
+               <xs:element name="Operator" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	 <xs:element name="CertificateInitialsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CertificateInitialsReturn" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+  	
+    <xs:element name="SigningCertRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCert" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+	
+	<xs:element name="MultipleSignSupportedRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MultipleSignSupported" type="tns:void"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="MultipleSignSupportedResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MultipleSignSupportedReturn" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="SigningCertAttrRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttr" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertAttrResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>	
+		
+	<xs:element name="SigningCertAttrV2Request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrV2" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SigningCertAttrV2Response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SigningCertAttrV2Return" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="SignerIdentifierRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SignerIdentifier" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:element name="SignerIdentifierResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SignerIdentifierReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="DigestAlgRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DigestAlg" type="tns:void"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="DigestAlgResponse">
+        <xs:complexType>
+            <xs:sequence>
+                   <xs:element name="DigestAlgReturn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	    
+	<xs:complexType name="void">
+        <xs:sequence>             
+        </xs:sequence>
+    </xs:complexType>	
+			
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CertificateInitialsRequest">
+    <wsdl:part element="tns:CertificateInitialsRequest" name="CertificateInitialsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertResponse">
+    <wsdl:part element="tns:SigningCertResponse" name="SigningCertResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertAttrV2Response">
+    <wsdl:part element="tns:SigningCertAttrV2Response" name="SigningCertAttrV2Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CertificateInitialsResponse">
+    <wsdl:part element="tns:CertificateInitialsResponse" name="CertificateInitialsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignerIdentifierRequest">
+    <wsdl:part element="tns:SignerIdentifierRequest" name="SignerIdentifierRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DigestAlgResponse">
+    <wsdl:part element="tns:DigestAlgResponse" name="DigestAlgResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertAttrResponse">
+    <wsdl:part element="tns:SigningCertAttrResponse" name="SigningCertAttrResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignHashResponse">
+    <wsdl:part element="tns:SignHashResponse" name="SignHashResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertAttrV2Request">
+    <wsdl:part element="tns:SigningCertAttrV2Request" name="SigningCertAttrV2Request">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SIMCardVersionRequest">
+    <wsdl:part element="tns:SIMCardVersionRequest" name="SIMCardVersionRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SIMCardVersionResponse">
+    <wsdl:part element="tns:SIMCardVersionResponse" name="SIMCardVersionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignerIdentifierResponse">
+    <wsdl:part element="tns:SignerIdentifierResponse" name="SignerIdentifierResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertRequest">
+    <wsdl:part element="tns:SigningCertRequest" name="SigningCertRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SignHashRequest">
+    <wsdl:part element="tns:SignHashRequest" name="SignHashRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SigningCertAttrRequest">
+    <wsdl:part element="tns:SigningCertAttrRequest" name="SigningCertAttrRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DigestAlgRequest">
+    <wsdl:part element="tns:DigestAlgRequest" name="DigestAlgRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MobileSignatureServicePort">
+    <wsdl:operation name="CertificateInitials">
+      <wsdl:input message="tns:CertificateInitialsRequest" name="CertificateInitialsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:CertificateInitialsResponse" name="CertificateInitialsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCert">
+      <wsdl:input message="tns:SigningCertRequest" name="SigningCertRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:SigningCertResponse" name="SigningCertResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCertAttrV2">
+      <wsdl:input message="tns:SigningCertAttrV2Request" name="SigningCertAttrV2Request">
+    </wsdl:input>
+      <wsdl:output message="tns:SigningCertAttrV2Response" name="SigningCertAttrV2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignerIdentifier">
+      <wsdl:input message="tns:SignerIdentifierRequest" name="SignerIdentifierRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:SignerIdentifierResponse" name="SignerIdentifierResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DigestAlg">
+      <wsdl:input message="tns:DigestAlgRequest" name="DigestAlgRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:DigestAlgResponse" name="DigestAlgResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCertAttr">
+      <wsdl:input message="tns:SigningCertAttrRequest" name="SigningCertAttrRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:SigningCertAttrResponse" name="SigningCertAttrResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignHash">
+      <wsdl:input message="tns:SignHashRequest" name="SignHashRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:SignHashResponse" name="SignHashResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIMCardVersion">
+      <wsdl:input message="tns:SIMCardVersionRequest" name="SIMCardVersionRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:SIMCardVersionResponse" name="SIMCardVersionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobileSignatureServicePortSoap11" type="tns:MobileSignatureServicePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CertificateInitials">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="CertificateInitialsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CertificateInitialsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCert">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SigningCertRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SigningCertResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCertAttrV2">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SigningCertAttrV2Request">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SigningCertAttrV2Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignerIdentifier">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SignerIdentifierRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SignerIdentifierResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DigestAlg">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="DigestAlgRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DigestAlgResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SigningCertAttr">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SigningCertAttrRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SigningCertAttrResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignHash">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SignHashRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SignHashResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIMCardVersion">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SIMCardVersionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SIMCardVersionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobileSignatureServicePortService">
+    <wsdl:port binding="tns:MobileSignatureServicePortSoap11" name="MobileSignatureServicePortSoap11">
+      <soap:address location="http://localhost:8181/service/MobileSignatureService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
